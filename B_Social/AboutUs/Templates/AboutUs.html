@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{%block content%}
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-top: -700px;
+  margin-left: 570px;
+  text-align: center;
+  font-family: arial;
+
+}
+
+
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  margin-top : -668px ;
+  margin-left: 1100px;
+
+}
+
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+
+  margin-top : 75px ;
+  margin-left: 50px;
+ }
+
+
+
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center"></h2>
+
+<div class="card2">
+  <img src="{% static 'cto.jpeg' %}" style="width:100%">
+  <h1>Kaan Arda AKYOL</h1>
+  <p class="title">CTO</p>
+  <p>Acıbadem University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+
+<h2 style="text-align:center"></h2>
+
+<div class="card">
+  <img src="{% static 'ceo2.jpg' %}" style="width:100%">
+  <h1>Kemal Barlas SÜSLER</h1>
+  <p class="title">CEO & Founder</p>
+  <p>Acıbadem University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+
+
+<h2 style="text-align:center"></h2>
+
+<div class="card3">
+   <img src="{% static 'manager.jpg' %}" style="width:100%">
+  <h1>Cemil Utku ÇALCI</h1>
+  <p class="title">Cyber Security Manager</p>
+  <p>Acıbadem University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+
+
+<p> We are 3 students at Acıbadem University in Computer Science Department. We were thinking about a site which can be use by people. </p>
+<p> As you can guess design a site is diffucult. At that point we said to each other we should design a site which is unique or the best in it's field.</p>
+<p> After that we saw that, there are not good sites </p>
+<p> And we started to do the good one</p>
+</body>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Representative Video</h2>
+<h3>Kemal Barlas Süsler (CEO&FOUNDER)</h3>
+
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/rQxytigg8yo"></iframe>
+</div>
+
+</body>
+
+
+
+{%endblock%}

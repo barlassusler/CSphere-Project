@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+
+  }
+  .container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+</style>
+</head>
+<body>
+<p>In this part you can see the users qualifications</p>
+
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<h2> K.. B.. S..</h2>
+<p> For a long time, I want to go to a match but not alone. Thank you B-SOCIAL <p/>
+<img src="{% static 'match.jpg' %}" style="width:20%">
+
+
+
+
+
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<h2> K.. A.. A..</h2>
+<p> I am a fan of Halsey but my friends are not. Of course I could go alone but this way is better. Thank you B-Social </p>
+<img src="{% static 'concert3.jpg' %}" style="width:20%">
+
+
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<h2> C.. U.. Ç..</h2>
+<p> I used this site and found a friend to go to film. I rated as 4 star because she came late</p>
+<img src="{% static 'cinema.jpg' %}" style="width:20%">
+
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

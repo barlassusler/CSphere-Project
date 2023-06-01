@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B-Social</title>
+
+
+
+
+
+
+    <style>
+        /* Add a black background color to the top navigation */
+        .navbar {
+            background-color: lightblue;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+            float: middle;
+            color: black;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none ;
+            font-size: 30px;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .navbar a.active {
+            background-color: darkslategray;
+            color: white ;
+        }
+
+        body {
+            background-color: cornsilk
+        }
+
+
+    </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+    <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="navbar">
+
+        <a class="active" href="/home"><i class="fa fa-fw fa-user"></i> B-Social</a>
+        <a href="/home"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="/aboutus">About Us</a>
+        <a href="/faq"><i class="fa fa-fw fa-question"></i> FAQ</a>
+        <a href="/activities">Activities</a>
+        <a href="/events">Events</a>
+        <a href="/blog">Blog</a>
+        <a href="/login">Log In</a>
+        <a href="/signup">Sign Up</a>
+
+
+
+</div>
+{% block content %}
+
+{% endblock %}
+
+</body>
+
+<footer>
+Copyright © 2023 | B-SOCIAL | All Rights Reserved
+
+</footer>
+</html>

@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top : 20px ;
+  margin-left : 250px
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/9 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 9</div>
+    <img src="{% static 'horse.jpg' %}" style="width:100%">
+    <div class="text">This photo is from horse riding</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 9</div>
+    <img src="{% static 'camping.jpg' %}" style="width:100%">
+    <div class="text">Camping Lovers ALERT!!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 9</div>
+    <img src="{% static 'card.jpg' %}" style="width:100%">
+    <div class="text">If you want to play card games but you don't have partners just take a look</div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="{% static 'concert.jpg' %}" style="width:100%">
+    <div class="text">A group of happy rock n rollers </div>
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="{% static 'hiking.jpg' %}" style="width:100%">
+    <div class="text">Breathe the  fresh air </div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="{% static 'music.jpg' %}" style="width:100%">
+    <div class="text">We know that you are talented </div>
+  </div>
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="{% static 'skiing.png' %}" style="width:100%">
+    <div class="text">indispensable in winter: Skiing </div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="{% static 'parachute.jpg' %}" style="width:100%">
+    <div class="text">Do you need adrenaline, come then </div>
+  </div>
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">9 / 9</div>
+    <img src="{% static 'theatre.jpg' %}" style="width:100%">
+    <div class="text"> Theatre </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<p> YOU SEE SOME PHOTOS FROM OUR ACTIVITIES AND EVENTS</p>
+<p> IF YOU WANT TO JOIN ANY OF THEM PLEASE CLICK ON THE BUTTON </p>
+<a href="/signup" >
+<button class="button">Come and Join Us!</button>
+</a>
+</body>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

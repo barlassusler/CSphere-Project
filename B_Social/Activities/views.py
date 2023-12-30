@@ -5,4 +5,4 @@ from django.http import HttpResponse
 def view(request):
     return render(request,'Activities.html')
 def view1(request):
-    return render(request, 'progress.html')
+    return render(request, 'camping.html')

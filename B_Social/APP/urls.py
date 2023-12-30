@@ -1,5 +1,5 @@
 """
-URL configuration for B_Social project.
+URL configuration for APP project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -20,13 +20,10 @@ from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
+    path('', index),
     path('home/', include('Home.urls')),
     path('aboutus/', include('AboutUs.urls')),
-    path('faq/', include('FAQ.urls')),
-    path('activities/', include('Activities.urls')),
     path('events/', include('Events.urls')),
     path('blog/', include('Blog.urls')),
-    path('login/', include('Login.urls')),
-    path('signup/', include('SignUp.urls'))
+    path('accounts/', include('accounts.urls')),
     ]

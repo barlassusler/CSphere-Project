@@ -6,4 +6,4 @@ def view(request):
     return render(request, 'Events.html')
 
 def view2(request):
-    return render(request,'progress.html')
+    return render(request,'camping.html')

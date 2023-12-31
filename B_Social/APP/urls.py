@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import index
+from accounts.views import signup
+from accounts.views import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,6 @@ urlpatterns = [
     path('aboutus/', include('AboutUs.urls')),
     path('events/', include('Events.urls')),
     path('blog/', include('Blog.urls')),
-    path('accounts/', include('accounts.urls')),
+    path('', include('accounts.urls')),
+
     ]

@@ -1,7 +1,119 @@
-{% extends 'base.html' %}
-{% load static %}
 
+
+{% load static %}
 {%block content%}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  #overflow: hidden;
+  background-color: #39379c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  width: 100%;
+
+
+
+}
+
+.navbar a {
+  float: left;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  padding: 22px 18px;
+  text-decoration: none;
+
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 34px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 22px 18px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #39379c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<body style="background-color:#800dcc;">
+
+
+<div class="navbar">
+  <a class="active" href="/"><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+  <a href="/">Home </a>
+  <a href="/events"> Events </a>
+  <div class="dropdown">
+    <button class="dropbtn">Improvements
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/req"> Request</a>
+      <a href="/com">Comments</a>
+
+    </div>
+  </div>
+  <a href="/blog">Blog </a>
+  <a href="/mroom">Room </a>
+  <a href="/login">Log In </a>
+  <a href="/signup">Sign Up</a>
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +127,8 @@ img {vertical-align: middle;}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin-top : 20px ;
-  margin-left : 250px
+  margin-top : 130px ;
+  margin-left : 180px
 }
 
 /* Next & previous buttons */

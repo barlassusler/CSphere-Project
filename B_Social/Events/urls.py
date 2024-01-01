@@ -1,6 +1,6 @@
 from django.urls import path
 from.views import view, view2
-
+from .views import event_application
 
 urlpatterns = [
     path('',view),
@@ -8,6 +8,6 @@ urlpatterns = [
     path('voleyball',view2),
     path('match',view2),
     path('cinema',view2),
-
+    path('event-application/', event_application, name='event_application'),
 
 ]

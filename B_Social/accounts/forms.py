@@ -12,3 +12,4 @@ class SignInForm(AuthenticationForm):
     class Meta:
         model = CustomUser
         fields = ['username', 'password']
+

@@ -14,7 +14,7 @@ def event_application(request):
         form = EventApplicationForm(request.POST)
         if form.is_valid():
             form.save()
-            # Başarıyla kaydedildikten sonra başka bir sayfaya yönlendirme yapabilirsiniz.
+
             return redirect('success_page')
     else:
         form = EventApplicationForm()

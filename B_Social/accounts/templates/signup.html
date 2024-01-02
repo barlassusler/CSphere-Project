@@ -1,11 +1,70 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Sign Up</h2>
-    <form method="post" action="{% url 'signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-    </form>
+{% load static %}
+ <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form method="post" action="{% url 'signup' %}" class="signup-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+    </div>
 
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8a6bbe;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #b074d3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f7b731;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #d4a93d;
+}
+</style>
 {% endblock %}

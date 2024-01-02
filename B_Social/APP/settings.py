@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "accounts"
-
+    "accounts",
+    'Events.apps.EventsConfig',
 
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -62,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['APP/templates','Home/templates', 'AboutUs/templates','Activities/templates','Blog/templates','Events/templates',
-                 'FAQ/templates', 'Home/templates', 'Login/templates', 'SignUp/templates'
+                 'FAQ/templates', 'Home/templates', 'Login/templates', 'SignUp/templates', os.path.join(BASE_DIR, 'templates')
                  ],
         'APP_DIRS': True,
         'OPTIONS': {

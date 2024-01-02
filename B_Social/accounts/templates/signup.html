@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load static %}
- <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+    <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
     <div class="signup-container">
         <h2>Sign Up</h2>
         <form method="post" action="{% url 'signup' %}" class="signup-form">
@@ -12,7 +12,6 @@
         </form>
     </div>
 
-
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -20,6 +19,11 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
+}
+
+.logo {
+    width: 250px; /* Logo genişliğini ayarlayın */
+    height: auto; /* Genişlik oranına göre yüksekliği otomatik ayarlayın */
 }
 
 .signup-container {

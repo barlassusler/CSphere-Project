@@ -79,6 +79,20 @@ body {
   background-color: #ddd;
 }
 
+.button {
+  padding: 20px 100px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #f7b731;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 725px;
+  margin-bottom: 20px;
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -216,10 +230,14 @@ div.desc {
 <div style="padding:6px;">
 
 </div>
+<a href="/signup" >
+ <button class="button">Event Application Form</button>
+</a>
+<p style="color: #fff; text-align: center; margin-top: 10px;">Are you related to the CSE department? Join us by filling out the application form!</p>
 
 </body>
 
-<a href="{% url 'event_application' %}" class="btn btn-primary">Event Application Form</a>
+</div>
 
 
 {% endblock %}

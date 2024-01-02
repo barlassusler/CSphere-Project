@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def index(request):
     return render(request,'base.html')
 
-from django.shortcuts import render, redirect
 
 def login_view(request):
     # Kullanıcı giriş işlemi başarıyla gerçekleştiği kontrolü

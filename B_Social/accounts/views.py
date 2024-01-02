@@ -1,32 +1,25 @@
 from django.shortcuts import render, redirect
-from .models import Student
-from .forms import StudentForm
-from django.contrib.auth import authenticate, login
-from .forms import CustomAuthenticationForm
-def add_student(request):
+from django.contrib.auth import login, authenticate
+from .forms import SignUpForm, SignInForm
+
+def signup(request):
     if request.method == 'POST':
-        form = StudentForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('login')  # Student listeleme sayfanızın adını buraya ekleyin
+            user = form.save()
+            return redirect('login')
+
     else:
-        form = StudentForm()
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
 
-    return render(request, 'add_student.html', {'form': form})
-
-
-def user_login(request):
+def login(request):
     if request.method == 'POST':
-        form = CustomAuthenticationForm(request, request.POST)
+        form = SignInForm(data=request.POST)
         if form.is_valid():
-            user = authenticate(request, username=form.cleaned_data['username'], password=form.cleaned_data['password'])
-            if user is not None:
-                login(request, user)
-                return redirect('student_list')  # Student listeleme sayfanızın adını buraya ekleyin
+            user = form.get_user()
+            login(request, user)
+            return redirect('home')
     else:
-        form = CustomAuthenticationForm()
-
-    return render(request, 'user_login.html', {'form': form})
-
-
-
+        form = SignInForm()
+    return render(request, 'login.html', {'form': form})

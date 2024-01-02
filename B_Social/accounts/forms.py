@@ -1,16 +1,14 @@
+# myapp/forms.py
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
-from .models import Student
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from .models import CustomUser
 
-class StudentForm(forms.ModelForm):
+class SignUpForm(UserCreationForm):
     class Meta:
-        model = Student
-        fields = '__all__'
+        model = CustomUser
+        fields = ['username', 'first_name', 'last_name', 'email', 'school_number', 'department', 'class_name', 'password1', 'password2']
 
-
-class CustomAuthenticationForm(AuthenticationForm):
-
-
+class SignInForm(AuthenticationForm):
     class Meta:
-        model = AuthenticationForm
-        fields = ['student number', 'password']
+        model = CustomUser
+        fields = ['username', 'password']

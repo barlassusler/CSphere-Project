@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <div class="signup-container">
+        <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+        <h2>Event Application Form</h2>
+        <form class="signup-form" method="post" action="{% url 'event_application' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8a6bbe;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #b074d3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* İçeriği ortala */
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Form elemanlarını sola hizala */
+}
+
+h2 {
+    color: #fff;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f7b731;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #d4a93d;
+}
+</style>
+{% endblock %}

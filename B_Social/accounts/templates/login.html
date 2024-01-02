@@ -1,16 +1,8 @@
 {% extends 'base.html' %}
-
 {% block content %}
 {% load static %}
-<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
-    <h2>LOG IN</h2>
 
-    <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">LOG IN</button>
-    </form>
-
+<html>
 
 <style>
 body {
@@ -34,8 +26,8 @@ body {
 }
 
 .logo {
-    width: 250px; /* Logo genişliğini ayarlayın */
-    height: auto; /* Genişlik oranına göre yüksekliği otomatik ayarlayın */
+    width: 250px;
+    height: auto;
 }
 
 form {
@@ -85,4 +77,14 @@ button:hover {
     background-color: #d4a93d;
 }
 </style>
+
+<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+    <h2>LOG IN</h2>
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">LOG IN</button>
+    </form>
 {% endblock %}
+</html>

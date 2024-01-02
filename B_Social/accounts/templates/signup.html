@@ -2,16 +2,8 @@
 
 {% block content %}
 {% load static %}
-<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
-    <div class="signup-container">
-        <h2>Sign Up</h2>
-    <form method="post" action="{% url 'signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-    </form>
-</div>
 
+<html>
 
 <style>
 body {
@@ -72,4 +64,17 @@ button:hover {
     background-color: #d4a93d;
 }
 </style>
-{% endblock %}
+
+
+<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+{%endblock%}
+</html>

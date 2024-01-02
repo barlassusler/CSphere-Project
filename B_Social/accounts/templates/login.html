@@ -1,10 +1,88 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Login</h2>
+{% load static %}
+<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+    <h2>LOG IN</h2>
+
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Login</button>
+        <button type="submit">LOG IN</button>
     </form>
+
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #800dcc;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 250px; /* Logo genişliğini ayarlayın */
+    height: auto; /* Genişlik oranına göre yüksekliği otomatik ayarlayın */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+.login-text {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+label {
+    margin-bottom: 8px;
+    color: white;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    background-color: #f7b731;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+}
+
+button:hover {
+    background-color: #d4a93d;
+}
+</style>
 {% endblock %}

@@ -1,0 +1,288 @@
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block content %}
+    {%load static%}
+    <title>CSphere</title>
+</head>
+<body>
+<div class="navbar">
+  <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
+  <a href="">Home </a>
+  <a href="/events"> Events </a>
+  <div class="dropdown">
+    <button class="dropbtn">Improvements
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/req"> Request</a>
+      <a href="/com">Comments</a>
+
+    </div>
+  </div>
+  <a href="/blog">Blog </a>
+  <a href="/mroom">Room </a>
+  <a href="/login">Log Out </a>
+  <a href="/profile"> Profile </a>
+</div>
+
+</body>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+ img {
+    width: 100%; /* Resimleri container genişliğine sığdır */
+    height: auto; /* Yüksekliği otomatik olarak ayarla */
+    object-fit: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 800px;
+  height:500px ;
+  position: relative;
+  margin-top: 122px;
+  margin-left: 280px;
+  margin: center;
+
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/9 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #f7b731;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.button:hover {background-color: #8a6bbe}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 9</div>
+    <img src="{% static 'cloud.png' %}" style="width:100%">
+    <div class="text">Berhan Türkü AY and Berke Öztürk were at ACU</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 9</div>
+    <img src="{% static 'cloud_pre.png' %}" style="width:100%">
+    <div class="text"> Happy news to who interested in AI</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 9</div>
+    <img src="{% static 'poster_session.png' %}" style="width:100%">
+    <div class="text"> CSE students displayed their posters </div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="{% static 'thy.png' %}" style="width:100%">
+    <div class="text"> Special thanks to our guest from THY</div>
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="{% static 'thy_pre.png' %}" style="width:100%">
+    <div class="text"> Big event at 17 December.   </div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="{% static 'ai.png' %}" style="width:100%">
+    <div class="text">Dr. Biçiçi and Emre Sokullu were with us. Thanks a lot both of them  </div>
+  </div>
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="{% static 'ai_pre.png' %}" style="width:100%">
+    <div class="text"> ATTENTION TO AI lovers !!! </div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="{% static 'meeting.png' %}" style="width:100%">
+    <div class="text"> First meeting of AI committee was held  </div>
+  </div>
+
+
+<!--    <div class="mySlides fade">-->
+<!--    <div class="numbertext">9 / 9</div>-->
+<!--    <img src="{% static 'ai2.png' %}" style="width:100%">-->
+<!--    <div class="text"> We are waiting you to Understanding AI event </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+
+
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<p> YOU SEE SOME PHOTOS FROM OUR EVENTS</p>
+<p> IF YOU WANT TO JOIN ANY OF THEM PLEASE CLICK ON THE BUTTON </p>
+<a href="/signup" >
+<button class="button">Come and Join Us!</button>
+</a>
+</body>
+{%endblock%}
+
+

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block content %}
+    {%load static%}
+    <title>CSphere</title>
+</head>
+<body>
+<div class="navbar">
+  <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
+  <a href="">Home </a>
+  <a href="/events"> Events </a>
+  <div class="dropdown">
+    <button class="dropbtn">Improvements
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/req"> Request</a>
+      <a href="/com">Comments</a>
+
+    </div>
+  </div>
+  <a href="/blog">Blog </a>
+  <a href="/mroom">Room </a>
+  <a href="/login">Log Out </a>
+  <a href="/profile"> Profile </a>
+</div>
+
+</body>
+
+{% endblock %}
+
+</html>
+
+
+
+

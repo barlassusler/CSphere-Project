@@ -1,12 +1,19 @@
 
+<head>
 
-{% load static %}
-{%block content%}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block content %}
+    {%load static%}
+    <title>CSphere</title>
+</head>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .navbar {
@@ -17,6 +24,7 @@ body {
   left: 0;
   align-items: center;
   width: 100%;
+  z-index:1000;
 
 
 
@@ -121,14 +129,22 @@ body {
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
+ img {
+    width: 100%; /* Resimleri container genişliğine sığdır */
+    height: auto; /* Yüksekliği otomatik olarak ayarla */
+    object-fit: cover;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 800px;
+  height:500px ;
   position: relative;
-  margin-top : 130px ;
-  margin-left : 180px
+  margin-top: 122px;
+  margin-left: 280px;
+  margin: center;
+
+  overflow: hidden;
 }
 
 /* Next & previous buttons */
@@ -217,7 +233,7 @@ img {vertical-align: middle;}
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #04AA6D;
+  background-color: #f7b731;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -225,7 +241,7 @@ img {vertical-align: middle;}
   margin-bottom: 20px;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #8a6bbe}
 
 .button:active {
   background-color: #3e8e41;
@@ -242,59 +258,59 @@ img {vertical-align: middle;}
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 9</div>
-    <img src="{% static 'horse.jpg' %}" style="width:100%">
-    <div class="text">This photo is from horse riding</div>
+    <img src="{% static 'cloud.png' %}" style="width:100%">
+    <div class="text">Berhan Türkü AY and Berke Öztürk were at ACU</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 9</div>
-    <img src="{% static 'camping.jpg' %}" style="width:100%">
-    <div class="text">Camping Lovers ALERT!!</div>
+    <img src="{% static 'cloud_pre.png' %}" style="width:100%">
+    <div class="text"> Happy news to who interested in AI</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 9</div>
-    <img src="{% static 'card.jpg' %}" style="width:100%">
-    <div class="text">If you want to play card games, but you don't have partners just take a look</div>
+    <img src="{% static 'poster_session.png' %}" style="width:100%">
+    <div class="text"> CSE students displayed their posters </div>
   </div>
 
     <div class="mySlides fade">
     <div class="numbertext">4 / 9</div>
-    <img src="{% static 'concert.jpg' %}" style="width:100%">
-    <div class="text">A group of happy rock n rollers </div>
+    <img src="{% static 'thy.png' %}" style="width:100%">
+    <div class="text"> Special thanks to our guest from THY</div>
   </div>
 
    <div class="mySlides fade">
     <div class="numbertext">5 / 9</div>
-    <img src="{% static 'hiking.jpg' %}" style="width:100%">
-    <div class="text">Breathe the  fresh air </div>
+    <img src="{% static 'thy_pre.png' %}" style="width:100%">
+    <div class="text"> Big event at 17 December.   </div>
   </div>
 
     <div class="mySlides fade">
     <div class="numbertext">6 / 9</div>
-    <img src="{% static 'music.jpg' %}" style="width:100%">
-    <div class="text">We know that you are talented </div>
+    <img src="{% static 'ai.png' %}" style="width:100%">
+    <div class="text">Dr. Biçiçi and Emre Sokullu were with us. Thanks a lot both of them  </div>
   </div>
 
 
     <div class="mySlides fade">
     <div class="numbertext">7 / 9</div>
-    <img src="{% static 'skiing.png' %}" style="width:100%">
-    <div class="text">indispensable in winter: Skiing </div>
+    <img src="{% static 'ai_pre.png' %}" style="width:100%">
+    <div class="text"> ATTENTION TO AI lovers !!! </div>
   </div>
 
     <div class="mySlides fade">
     <div class="numbertext">8 / 9</div>
-    <img src="{% static 'parachute.jpg' %}" style="width:100%">
-    <div class="text">Do you need adrenaline, come then </div>
+    <img src="{% static 'meeting.png' %}" style="width:100%">
+    <div class="text"> First meeting of AI committee was held  </div>
   </div>
 
 
-    <div class="mySlides fade">
-    <div class="numbertext">9 / 9</div>
-    <img src="{% static 'theatre.jpg' %}" style="width:100%">
-    <div class="text"> Theatre </div>
-  </div>
+<!--    <div class="mySlides fade">-->
+<!--    <div class="numbertext">9 / 9</div>-->
+<!--    <img src="{% static 'ai2.png' %}" style="width:100%">-->
+<!--    <div class="text"> We are waiting you to Understanding AI event </div>-->
+<!--  </div>-->
 
 
 
@@ -319,7 +335,7 @@ img {vertical-align: middle;}
     <span class="dot" onclick="currentSlide(6)"></span>
     <span class="dot" onclick="currentSlide(7)"></span>
     <span class="dot" onclick="currentSlide(8)"></span>
-    <span class="dot" onclick="currentSlide(9)"></span>
+
 
 </div>
 
@@ -353,7 +369,7 @@ function showSlides(n) {
 }
 </script>
 
-<p> YOU SEE SOME PHOTOS FROM OUR ACTIVITIES AND EVENTS</p>
+<p> YOU SEE SOME PHOTOS FROM OUR EVENTS</p>
 <p> IF YOU WANT TO JOIN ANY OF THEM PLEASE CLICK ON THE BUTTON </p>
 <a href="/signup" >
 <button class="button">Come and Join Us!</button>

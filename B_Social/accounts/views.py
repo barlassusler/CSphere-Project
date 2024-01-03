@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as auth_login
 from .forms import SignUpForm, SignInForm
-
+from django.contrib.auth import authenticate
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -18,8 +18,12 @@ def login(request):
         form = SignInForm(data=request.POST)
         if form.is_valid():
             user = form.get_user()
-            login(request, user)
-            return redirect('home')
+            auth_login(request, user)
+            return redirect('home_login')
     else:
         form = SignInForm()
     return render(request, 'login.html', {'form': form})
+
+
+def home_login(request):
+    return render(request, 'home_login.html')

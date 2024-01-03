@@ -1,13 +1,26 @@
 {% extends 'base.html' %}
+
 {% block content %}
 {% load static %}
+   <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
+    <div class="container">
+        <h2>Login</h2>
+        <h3 class="login-text">Enter your accounts details here to login</h3>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+         <h4> If you don't have an account please sign up</h4>
+        </form>
 
-<html>
+    </div>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background-color: #800dcc;
+    background-color: #8a6bbe;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -23,26 +36,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.logo {
-    width: 250px;
-    height: auto;
+    margin-top: 60px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 h2 {
     text-align: center;
-    color: black;
+    color: #333;
     margin-bottom: 20px;
-
 }
 
+h4 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
 .login-text {
     text-align: center;
     color: #000;
@@ -52,7 +66,7 @@ h2 {
 
 label {
     margin-bottom: 8px;
-    color: white;
+    color: black;
 }
 
 input {
@@ -77,14 +91,4 @@ button:hover {
     background-color: #d4a93d;
 }
 </style>
-
-<a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
-    <h2>LOG IN</h2>
-
-    <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">LOG IN</button>
-    </form>
 {% endblock %}
-</html>

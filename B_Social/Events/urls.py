@@ -8,6 +8,6 @@ urlpatterns = [
     path('voleyball',view2),
     path('match',view2),
     path('cinema',view2),
-    path('event-application/', event_application, name='event_application'),
+    path('event-application', event_application, name='event_application'),
 
 ]

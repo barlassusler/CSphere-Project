@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSphere</title>
 
-{%load static%}
-
-{%block content%}
+    {% block content %}
+    {%load static%}
+    <title>CSphere</title>
+</head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -87,7 +89,9 @@ body {
 
 
 <div class="navbar">
-  <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+  <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
   <a href="">Home </a>
   <a href="/events"> Events </a>
   <div class="dropdown">

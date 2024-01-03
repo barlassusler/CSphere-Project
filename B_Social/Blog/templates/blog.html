@@ -85,7 +85,9 @@ body {
 <body style="background-color:#800dcc;">
 
 <div class="navbar">
-  <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+  <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
   <a href="/">Home </a>
   <a href="/events"> Events </a>
   <div class="dropdown">

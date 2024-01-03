@@ -4,7 +4,9 @@
 {% load static %}
 
     <div class="signup-container">
-        <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+        <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
         <h2>Event Application Form</h2>
         <form class="signup-form" method="post" action="{% url 'event_application' %}">
             {% csrf_token %}

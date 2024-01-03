@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
-{%load static%}
-{%block content%}
 
+
+
+<head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSphere</title>
+
+    {% block content %}
+    {%load static%}
+    <title>CSphere</title>
+</head>
 
 
 
@@ -25,6 +30,7 @@ body {
 
 
 
+
 }
 
 .navbar a {
@@ -32,7 +38,7 @@ body {
   font-size: 34px;
   color: white;
   text-align: center;
-  padding: 24px 18px;
+  padding: 20px 18px;
   text-decoration: none;
 
 }
@@ -103,8 +109,9 @@ body {
 
 <body style="background-color:#800dcc;">
 
+
 <div class="navbar">
-  <a class="active" href=""><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
+  <a class="active" href="/"><img src="{% static 'logo.jpg' %}" alt="Logo" class="logo"></a>
   <a href="/">Home </a>
   <a href="/events"> Events </a>
   <div class="dropdown">
@@ -122,6 +129,7 @@ body {
   <a href="/login">Log In </a>
   <a href="/signup">Sign Up</a>
 </div>
+
 
 
 
@@ -233,8 +241,8 @@ div.desc {
 <div style="padding:6px;">
 
 </div>
-<a href="/event-application" >
- <button class="button">Event Application Form</button>
+<a href="{% url 'event_application' %}" >
+  <button class="button">Event Application Form</button>
 </a>
 <p style="color: #fff; text-align: center; margin-top: 10px;">Are you related to the CSE department? Join us by filling out the application form!</p>
 

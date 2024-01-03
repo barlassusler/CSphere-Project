@@ -7,7 +7,7 @@ def view(request):
     return render(request, 'Events.html')
 
 def view2(request):
-    return render(request,'camping.html')
+    return render(request,'progress.html')
 
 def event_application(request):
     if request.method == 'POST':

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <div class="signup-container">
+        <a href="{% url 'home' %}">
+    <img src="{% static 'logo.jpg' %}" alt="Logo">
+</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #8e44ad; /* Mor renk ekledik */
+        }
+
+        .message-container {
+            border: 2px solid #3498db;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p>Your application has been received!</p>
+    </div>
+</body>
+</html>
+
+{% endblock %}

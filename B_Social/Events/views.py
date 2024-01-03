@@ -15,9 +15,11 @@ def event_application(request):
         form = EventApplicationForm(request.POST)
         if form.is_valid():
             form.save()
-
             return redirect('success_page')
     else:
         form = EventApplicationForm()
 
     return render(request, 'events/event_application_form.html', {'form': form})
+
+def success_page(request):
+    return render(request, 'events/success_page.html')

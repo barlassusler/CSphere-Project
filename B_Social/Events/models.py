@@ -10,4 +10,4 @@ class EventApplication(models.Model):
     event_purpose = models.TextField()
     event_scope = models.TextField()
     event_date = models.DateField()
-    event_duration = models.TimeField()
+    event_duration = models.CharField(max_length=10)

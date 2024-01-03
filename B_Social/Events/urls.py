@@ -1,5 +1,5 @@
 from django.urls import path
-from.views import view, view2,event_application
+from.views import view, view2, event_application, success_page
 
 
 urlpatterns = [
@@ -8,6 +8,6 @@ urlpatterns = [
     path('voleyball',view2),
     path('match',view2),
     path('cinema',view2),
-    path('event-application', event_application, name='event_application'),
-
+    path('event_application', event_application, name='event_application'),
+    path('success_page/', success_page, name='success_page'),
 ]

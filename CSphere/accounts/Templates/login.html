@@ -12,7 +12,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Login</button>
-         <h4> If you don't have an account please sign up</h4>
+         <p>If you don't have an account please <a href="{% url 'signup' %}">Sign Up</a> </p>
         </form>
 
     </div>
@@ -90,5 +90,11 @@ button {
 button:hover {
     background-color: #d4a93d;
 }
+p {
+            text-align: center; /* Metni ortala */
+            color: black; /* Metnin rengi mavi olsun */
+            font-size: 18px; /* Metin boyutu */
+            font-family: Arial, sans-serif; /* Font ailesi */
+        }
 </style>
 {% endblock %}

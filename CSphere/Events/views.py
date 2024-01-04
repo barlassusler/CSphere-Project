@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import EventApplicationForm
-
+from django.contrib.auth.decorators import login_required
+@login_required
 
 def view(request):
     return render(request, 'Events.html')

@@ -6,7 +6,7 @@
     {%load static%}
     <title>CSphere</title>
 </head>
-<body>
+<body style="background-color:#800dcc;">
 <div class="navbar">
   <a href="{% url 'home' %}">
     <img src="{% static 'logo.jpg' %}" alt="Logo">
@@ -26,16 +26,93 @@
   <a href="/blog">Blog </a>
   <a href="/mroom">Room </a>
   <a href="/login">Log Out </a>
-  <a href="/profile"> Profile </a>
+
 </div>
 
 </body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  #overflow: hidden;
+  background-color: #39379c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+
+
+}
+
+.navbar a {
+  float: left;
+  font-size: 34px;
+  color: white;
+  text-align: center;
+  padding: 20px 18px;
+  text-decoration: none;
+
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 34px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 22px 18px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #39379c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {font-family: Verdana, sans-serif; margin:0; color:
+
+}
 .mySlides {display: none}
  img {
     width: 100%; /* Resimleri container genişliğine sığdır */
@@ -179,7 +256,7 @@ body {font-family: Verdana, sans-serif; margin:0}
   <div class="mySlides fade">
     <div class="numbertext">3 / 9</div>
     <img src="{% static 'poster_session.png' %}" style="width:100%">
-    <div class="text"> CSE students displayed their posters </div>
+    <div class="text"> 3rd grade CSE students displayed their posters </div>
   </div>
 
     <div class="mySlides fade">

@@ -160,6 +160,7 @@ div.desc {
 
 * {
   box-sizing: border-box;
+
 }
 
 .responsive {
@@ -168,14 +169,14 @@ div.desc {
   width: 24.99999%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   .responsive {
-    width: 49.99999%;
+    width: 100%;
     margin: 6px 0;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .responsive {
     width: 100%;
   }
@@ -196,38 +197,40 @@ div.desc {
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="/events/voleyball">
-      <img src="{% static 'voleyball.jpg' %}" style="width:100%">
+    <a target="_blank" href="/events/ai2">
+      <img src="{% static 'ai2_pre.png' %}" style="width:100%">
     </a>
-    <div class="desc"> Türkiye- South Korea </div>
+    <div class="desc"> 21 December at 17.00 Burhan Çetinkaya will be with us. Let's meet in C201 </div>
   </div>
 </div>
 
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="/events/show">
-      <img src="{% static 'show.jpg' %}" style="width:100%">
+    <a target="_blank" href="/events/cloud">
+      <img src="{% static 'cloud_pre.png' %}" style="width:100%">
     </a>
-    <div class="desc"> I need to laugh with someone</div>
+    <div class="desc"> We will hold an event with AI engineer Berhan Türkü Ay and cloud engineer
+    Berke Öztürk</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="/events/match">
-      <img src="{% static 'match.jpg' %}" style="width:100%">
+    <a target="_blank" href="/events/ai">
+      <img src="{% static 'ai_pre.png' %}" style="width:100%">
     </a>
-    <div class="desc">Türkiye has match</div>
+    <div class="desc">Dr. Ergün Biçiçi and Emre Sokullu will be with us to speak about Click through rate prediction with AI</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="/events/cinema">
-      <img src="{% static 'cinema.jpg' %}" style="width:100%">
+    <a target="_blank" href="/events/thy">
+      <img src="{% static 'thy_pre.png' %}" style="width:100%">
     </a>
-    <div class="desc">Fast and Furious X is out, I want someone to watch together </div>
+    <div class="desc">We are excited to announce, THY network planning manager
+    and also co-founder of Pricing Coach Cavit Çolak will with us.</div>
   </div>
 </div>
 
@@ -244,7 +247,7 @@ div.desc {
 <a href="{% url 'event_application' %}" >
   <button class="button">Event Application Form</button>
 </a>
-<p style="color: #fff; text-align: center; margin-top: 10px;">Are you related to the CSE department? Join us by filling out the application form!</p>
+<p style="color: #fff; text-align: center; margin-top: 10px;">Are you interested into hold an event in the CSE department? Apply us by filling out the application form!</p>
 
 </body>
 

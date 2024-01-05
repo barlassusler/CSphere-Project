@@ -8,7 +8,7 @@ def view(request):
 
 
 def view2(request):
-    return render(request, 'camping.html')
+    return render(request, 'progress.html')
 
 
 def event_application(request):
@@ -22,3 +22,6 @@ def event_application(request):
         form = EventApplicationForm()
 
     return render(request, 'events/event_application_form.html', {'form': form})
+
+def success_page(request):
+    return render(request, 'events/success_page.html')

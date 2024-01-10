@@ -4,6 +4,7 @@
 {% load static %}
 
 <html>
+<div class="background-image"></div>
 
 <style>
 body {
@@ -20,34 +21,41 @@ body {
 }
 
 .signup-container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 280px;
+    margin:      auto;
     background-color: #b074d3;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .signup-form {
     display: flex;
     flex-direction: column;
+
 }
 
 h2 {
     text-align: center;
     color: #fff;
+     display: block;
 }
 
 label {
     margin-bottom: 8px;
     color: #fff;
+    display: block; /* Etiketleri blok eleman olarak ayarla */
+
+
 }
 
 input {
-    padding: 8px;
+    padding: 6px;
     margin-bottom: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+     display: block;
 }
 
 button {
@@ -66,11 +74,25 @@ button:hover {
 }
 
 p {
-            text-align: center;
+            text-align: left;
             color: black;
             font-size: 18px;
             font-family: Arial, sans-serif;
+
         }
+
+.background-image {
+    background-image: url('/static/acıbadem_universitesi.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; /* Dilerseniz opaklık ayarı yapabilirsiniz */
+    z-index: -1; /* Diğer içeriklerin önünde kalması için negatif z-index değeri kullanın */
+}
 </style>
 
 

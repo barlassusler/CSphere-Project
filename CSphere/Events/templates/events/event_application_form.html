@@ -4,6 +4,7 @@
 {% load static %}
 
     <div class="signup-container">
+        <div class="background-image"></div>
         <a href="{% url 'home' %}">
     <img src="{% static 'logo.jpg' %}" alt="Logo">
 </a>
@@ -25,19 +26,33 @@ body {
 }
 
 .signup-container {
-    max-width: 400px;
+    max-width: 310px;
     margin: 0 auto;
     background-color: #b074d3;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* İçeriği ortala */
+    display : block ;
 }
+.background-image {
+    background-image: url('/static/acıbadem_universitesi.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6; /* Dilerseniz opaklık ayarı yapabilirsiniz */
+    z-index: -1; /* Diğer içeriklerin önünde kalması için negatif z-index değeri kullanın */
+ }
 
 .signup-form {
     display: flex;
     flex-direction: column;
     text-align: left; /* Form elemanlarını sola hizala */
+    display : block ;
 }
 
 h2 {
@@ -47,6 +62,7 @@ h2 {
 label {
     margin-bottom: 8px;
     color: #fff;
+    display: block;
 }
 
 input {

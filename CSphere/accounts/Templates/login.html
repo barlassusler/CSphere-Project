@@ -14,7 +14,7 @@
             <button type="submit">Login</button>
          <p>If you don't have an account please <a href="{% url 'signup' %}">Sign Up</a> </p>
         </form>
-
+<div class="background-image"></div>
     </div>
 
 <style>
@@ -26,6 +26,18 @@ body {
     color: #fff;
 }
 
+.background-image {
+    background-image: url('/static/acıbadem_universitesi.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9; /* Dilerseniz opaklık ayarı yapabilirsiniz */
+    z-index: -1; /* Diğer içeriklerin önünde kalması için negatif z-index değeri kullanın */
+}
 .container {
     max-width: 600px;
     margin: 100px auto;
